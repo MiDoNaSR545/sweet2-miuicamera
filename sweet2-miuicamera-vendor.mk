@@ -5,8 +5,14 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/sweet2-miuicamera
 
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/default-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions-miuicamera.xml \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
+
 PRODUCT_PACKAGES += \
     MiuiCamera \
+    MiuiCameraOverlayIcon \
     libMiStereoFactoryCalibAnalyzeBin_qual \
     libmiStereoCalibLib_qual \
     libgui-xiaomi \
