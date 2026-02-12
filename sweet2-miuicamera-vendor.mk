@@ -10,9 +10,19 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet2-miuicamera/configs/permissions/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml \
     vendor/xiaomi/sweet2-miuicamera/configs/permissions/privapp-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-miuicamera.xml
 
+# Xiaomi Scanner
+PRODUCT_COPY_FILES += \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/default-permissions-scanner.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions-scanner.xml \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/scanner-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/scanner-hiddenapi-package-whitelist.xml \
+    vendor/xiaomi/sweet2-miuicamera/configs/permissions/privapp-permissions-scanner.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-scanner.xml
+
+PRODUCT_SYSTEM_PROPERTIES += \
+    ro.miui.ui.version.name=V202
+
 PRODUCT_PACKAGES += \
     MiuiCamera \
     MiuiCameraOverlayIcon \
+    scanner \
     libMiStereoFactoryCalibAnalyzeBin_qual \
     libmiStereoCalibLib_qual \
     libgui-xiaomi \
