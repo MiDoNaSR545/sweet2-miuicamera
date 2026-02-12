@@ -5,6 +5,9 @@
 PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/sweet2-miuicamera
 
+# Camera
+$(call soong_config_set_bool,camera,override_format_from_reserved,true)
+
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/sweet2-miuicamera/configs/permissions/default-permissions-miuicamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions-miuicamera.xml \
     vendor/xiaomi/sweet2-miuicamera/configs/permissions/miuicamera-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/miuicamera-hiddenapi-package-whitelist.xml \
